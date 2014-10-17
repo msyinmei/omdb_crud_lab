@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>OMBD Film</title>
+</head>
+<body>
+
+<form method="POST" action="/later/<%=film.imdbID%>" >
+  <input type="hidden" name="id" value="<%= film.imdbID%>">
+  <input type="hidden" name="title" value="<%=film.Title%>">
+  <input type="submit" value="Add to Favs">
+</form>
+
+  <img src="<%=film.Poster%>" alt="">
+  <br>
+  <% for (key in film) { %>
+    <strong> <%= key %> </strong>: <%= film[key]%>
+    <br>
+  <% } %>
+
+</body>
+</html>
